@@ -1,0 +1,39 @@
+/*
+    Grid Set-Up
+*/
+body {
+    display: grid;
+    min-height: 100vh;
+    min-width: 100%;
+    grid-template-rows: 400px 1fr 100px;
+    grid-row-gap: 20px;
+    margin: 0;
+}
+
+main {
+    display: grid;
+}
+
+#services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+/*
+    Trial
+*/
+
+/*
+    Development Guides
+*/
+body>* {
+    border: 1px solid red;
+}
+
+main>* {
+    border: 1px solid blue;
+}
+
+#services>* {
+    border: 1px solid green;
+}
