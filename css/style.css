@@ -20,7 +20,13 @@ main {
 }
 
 #services .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#team .grid {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 800px;
 }
 
 /*
@@ -39,5 +45,9 @@ main>* {
 }
 
 #services .grid>* {
+    border: 1px solid green;
+}
+
+#team .grid>* {
     border: 1px solid green;
 }
