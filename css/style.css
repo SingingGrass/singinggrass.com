@@ -9,24 +9,33 @@ body {
     display: grid;
     min-height: 100vh;
     min-width: 100%;
-    grid-template-rows: 400px 1fr 100px;
-    grid-row-gap: 20px;
+    grid-template-columns: auto minmax(auto, 64em) auto;
     margin: 0;
+}
+
+#content {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 400px 1fr 100px;
+    grid-row-gap: 1em;
 }
 
 main {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr
+
+    grid-row-gap: 1em;
 }
 
 #services .grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
 }
 
 #team .grid {
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     min-height: 800px;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
 }
 
 /*
@@ -36,8 +45,13 @@ main {
 /*
     Development Guides
 */
-body>* {
+body>div {
+    background-color: hotpink;
+}
+
+#content>* {
     border: 1px solid red;
+    background-color: white;
 }
 
 main>* {
@@ -50,4 +64,17 @@ main>* {
 
 #team .grid>* {
     border: 1px solid green;
+}
+
+/*
+    Font
+*/
+html { 
+    font-size: 62.5%; /* font-size 1em = 10px on default browser settings */ 
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.5em;
+    font-size: 1.4em;
 }
