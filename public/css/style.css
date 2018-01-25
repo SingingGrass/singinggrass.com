@@ -1,0 +1,96 @@
+/*
+    Grid Set-Up
+*/
+.grid {
+    display: grid;
+}
+
+body {
+    display: grid;
+    min-width: 100%;
+    margin: 0;
+}
+
+#services .grid {
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+}
+
+#team .grid {
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+
+}
+
+.s {
+    display: flex;
+}
+
+.s .inner>*  {
+    max-width: 55em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.s .inner {
+    width:100%;
+}
+
+/*
+    Background
+*/
+:root {
+    --dark-green-bg: rgba(5,66,40,0.95);
+    --white-bg: rgba(255,255,255,0.95)
+}
+
+.s.s-light {
+    background-image: url("/img/background-light.png");
+    background-color: var(--white-bg);
+}
+
+.s-light>.inner {
+    background-color: var(--white-bg);
+}
+
+.s.s-dark {
+    background-image: url("/img/background-dark.png");
+    background-color: var(--dark-green-bg);
+    color: white;
+}
+
+.s-dark>.inner {
+    background-color: var(--dark-green-bg);
+}
+
+.inner {
+    padding: 2em;
+}
+
+/*
+    Font
+*/
+html { 
+    font-size: 62.5%; /* font-size 1em = 10px on default browser settings */ 
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.6em;
+    font-size: 1.6em;
+}
+
+.s .inner  {
+    padding: 4em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 1em 0 0 0;
+}
+
+h1, h2 {
+    padding: 2em 0 0 0;
+}
