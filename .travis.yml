@@ -1,0 +1,2 @@
+script:
+  - s3cmd sync --delete-removed --no-mime-magic --guess-mime-type --add-header="Cache-Control:max-age=3600" -P -M -r / s3://${AWS_BUCKET_NAME}/
