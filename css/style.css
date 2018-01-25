@@ -7,63 +7,66 @@
 
 body {
     display: grid;
-    min-height: 100vh;
     min-width: 100%;
-    grid-template-columns: auto minmax(auto, 64em) auto;
     margin: 0;
-}
-
-#content {
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: 400px 1fr 100px;
-    grid-row-gap: 1em;
-}
-
-main {
-    display: grid;
-
-    grid-row-gap: 1em;
 }
 
 #services .grid {
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
 }
 
 #team .grid {
-    grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
-    min-height: 800px;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+
+}
+
+.s {
+    display: flex;
+}
+
+.s .inner>*  {
+    max-width: 55em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.s .inner {
+    width:100%;
 }
 
 /*
-    Trial
+    Background
 */
-
-/*
-    Development Guides
-*/
-body>div {
-    background-color: hotpink;
+:root {
+    --dark-green-bg: rgba(5,66,40,0.95);
+    --white-bg: rgba(255,255,255,0.95)
 }
 
-#content>* {
-    border: 1px solid red;
-    background-color: white;
+.s.s-light {
+    background-image: url("/img/background-light.png");
+    background-color: var(--white-bg);
 }
 
-main>* {
-    border: 1px solid blue;
+.s-light>.inner {
+    background-color: var(--white-bg);
 }
 
-#services .grid>* {
-    border: 1px solid green;
+.s.s-dark {
+    background-image: url("/img/background-dark.png");
+    background-color: var(--dark-green-bg);
+    color: white;
 }
 
-#team .grid>* {
-    border: 1px solid green;
+.s-dark>.inner {
+    background-color: var(--dark-green-bg);
+}
+
+.inner {
+    padding: 2em;
 }
 
 /*
@@ -75,6 +78,19 @@ html {
 
 body {
     font-family: 'PT Sans', sans-serif;
-    line-height: 1.5em;
-    font-size: 1.4em;
+    line-height: 1.6em;
+    font-size: 1.6em;
+}
+
+.s .inner  {
+    padding: 4em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 1em 0 0 0;
+}
+
+h1, h2 {
+    padding: 2em 0 0 0;
 }
