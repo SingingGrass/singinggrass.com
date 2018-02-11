@@ -19,10 +19,11 @@ var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for th
 var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
 var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
 
-            output += '<img style="max-width:100%;" src="' + src + '" />';
+            //output += '<img style="max-width:100%;" src="' + src + '" />';
             output += '</div>';
 
             console.log(item);
+            return k < 2;
         });
         $content.html(output);
     }
