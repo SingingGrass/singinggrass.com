@@ -27,6 +27,11 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     grid-column-gap: 2em;
     grid-row-gap: 2em;
+    text-align: center;
+}
+
+#clients .grid img {
+    width: 50%;
 }
 
 .s {
