@@ -23,16 +23,10 @@ body {
     grid-row-gap: 2em;
 }
 
-#insights .grid {
+#clients .grid {
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     grid-column-gap: 2em;
     grid-row-gap: 2em;
-}
-
-#insights .grid div {
-    max-height: 300px;
-    min-height: 300px;
-    overflow: hidden;
 }
 
 .s {
@@ -62,7 +56,7 @@ body {
 }
 
 .s.s-light {
-    background-image: url("../img/background-light.png");
+    background-image: url("/img/background-light.png");
     background-color: var(--white-bg);
 }
 
@@ -71,7 +65,7 @@ body {
 }
 
 .s.s-dark {
-    background-image: url("../img/background-dark.png");
+    background-image: url("/img/background-dark.png");
     background-color: var(--dark-green-bg);
     color: white;
 }
@@ -114,7 +108,7 @@ footer {
     Logo
 */
 img.logo {
-    width: 300px;
+    width: 18em;
     max-width: 100%;
     height: auto;
 }
